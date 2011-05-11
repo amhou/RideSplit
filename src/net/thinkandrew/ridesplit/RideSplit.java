@@ -23,23 +23,20 @@ public class RideSplit extends Activity {
         float numRiders = Float.valueOf(ridersField.getText().toString());
 
         final CheckBox responseCheckBox = (CheckBox) findViewById(R.id.CheckBoxCarWash); // would you like a carwash?
-        boolean carwash = responseCheckBox.isChecked();
 
-        if (numRiders < (float) 0) // prevents division by 0
-        {
+        if (numRiders <= (float) 0) {// prevents division by 0
             Toast.makeText(RideSplit.this, "Number of Riders must be greater than 0.", Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        if (carwash) // carwash is worth $5
-        {
+        if (responseCheckBox.isChecked()) {// carwash is worth $5
             gasCost += 5;
         }
 
         Float driverCost = gasCost / ((float) 1.2 * numRiders);      // Driver pays less than riders to compensate for wear and tear on car
         Float riderCost = (gasCost - driverCost) / (numRiders - 1);  // Rider cost
 
-        if (numRiders == 1) // Special case
-        {
+        if (numRiders == 1) {// Special case
             driverCost = gasCost;
             riderCost = (float) 0;
         }
