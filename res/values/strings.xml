@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RideSplit</string>
+    <string name="gas_cost">Cost of Gas</string>
+    <string name="num_riders">Number of Riders</string>
+    <string name="carwash">Would you like to include a carwash ($5)?</string>
+    <string name="calculate">Calculate</string>
+    <string name="drivers_cost">Driver\'s Cost:</string>
+    <string name="riders_cost">Rider\'s Cost:</string>
 </resources>

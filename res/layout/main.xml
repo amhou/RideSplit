@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Hello World, RideSplit"
-    />
-</LinearLayout>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+        <TextView
+                android:id="@+id/cost_gas_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gas_cost"
+                android:textSize="12pt"/>
+        <EditText
+                android:id="@+id/cost_gas"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_width="fill_parent"/>
+        <TextView
+                android:id="@+id/riders_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/num_riders"
+                android:textSize="12pt"/>
+        <EditText
+                android:id="@+id/riders"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_width="fill_parent"/>
+        <CheckBox
+                android:id="@+id/CheckBoxCarWash"
+                android:layout_height="wrap_content"
+                android:text="@string/carwash"
+                android:layout_width="fill_parent"/>
+        <Button
+                android:id="@+id/ButtonCalculate"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"
+                android:onClick="calcCost"
+                android:layout_width="fill_parent"/>
+        <TextView
+                android:id="@+id/cost_driver"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/drivers_cost"
+                android:textSize="12pt"/>
+        <TextView
+                android:id="@+id/cost_rider"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/riders_cost"
+                android:textSize="12pt"/>
 
+    </LinearLayout>
+</ScrollView>
